@@ -1,0 +1,17 @@
+Seu nome: Liam Cabral Teixeira
+
+1)select * from en_filme where data_lancamento = (
+	select min(en_filme.data_lancamento) from en_filme
+	);
+
+2)select en_cliente.id_cliente, en_cliente.nome, count(en_aluguel.id_aluguel) as alugueis from en_cliente 
+	inner join en_aluguel on en_cliente.id_cliente = en_aluguel.id_cliente
+	group by en_cliente.id_cliente
+	order by alugueis;
+
+3)select en_cliente.id_cliente, en_cliente.nome, count(en_aluguel.id_aluguel) as alugueis, 
+	sum(en_aluguel.valor) as total_gasto, en_aluguel.data_aluguel as ano
+	from en_cliente
+	inner join en_aluguel on en_cliente.id_cliente = en_aluguel.id_cliente
+	group by en_cliente.id_cliente, en_aluguel.data_aluguel
+	order by total_gasto desc;

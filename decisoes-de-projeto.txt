@@ -1,0 +1,6 @@
+No arquivo Main.java estão todas as funções a serem testadas, todas estão comentadas, então caso queira testar alguma descomente a 
+mesma e insira os dados requisitados caso sejam, tais funções são chamadas a partir dos controllers da aplicação, onde faço a 
+ultilização dos DAOImpl, que criei com o intuito de me manter mais organizado(src/Controllers/).
+Tive uma grande dificuldade na manipulação dos dados ao listar e ao editar os alugueis, por isso, infelizmente não consegui terminar
+o "edit" deles.
+Com isso, tentei manter o padrão já ultizado no Cliente.
